@@ -17,13 +17,13 @@ mongoose.connect('mongodb://127.0.0.1:27017/akki').then(()=>{
 
 app.use(cors())
 app.use(express.json())
-app.use('/api/user',userRouter)
+app.use('/api',userRouter)
 
 
 
 
 
 app.listen(port, ()=>{
-    console.log(`server is running on this port ${port}`);
+    console.log(`http://localhost:${port}`);
 })
 
